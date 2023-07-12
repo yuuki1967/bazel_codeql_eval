@@ -3,6 +3,10 @@
 ## How to analyze MEM55 with CodeQL
 
 ### automated (direct) operation
+
+1. bazel clean --expunge
+2. **codeql database create ../../../codeql-db/mem55-test -l cpp --command "bazel build --spawn_strategy=local --nouse_action_cache //ope_delete_missing_partner:test"**
+3. **codeql database analyze ../../../codeql-db/mem55-test  --format=sarif-latest --output=results.sarif ../../../vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.ql**
 ```
 $ bazel clean --expunge
 INFO: Starting clean (this may take a while). Consider using --async if the clean takes more than several minutes.
@@ -55,8 +59,35 @@ Running build command: [bazel, build, --spawn_strategy=local, --nouse_action_cac
 [2023-07-13 01:56:57] [build-stderr] INFO: Build completed successfully, 8 total actions
 Finalizing database at /Users/yukiendo/workplace/codeql-db/mem55-test.
 Successfully created database at /Users/yukiendo/workplace/codeql-db/mem55-test.
+$ codeql database analyze ../../../codeql-db/mem55-test  --format=sarif-latest --output=results.sarif ../../../vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.ql
+Running queries.
+Compiling query plan for /Users/yukiendo/workplace/bazel_codeql_eval/cpp-tutorial/mem55-test/../../../vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.ql.
+WARNING: Type XMLFile has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:19,35-42)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:28,37-47)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:39,51-61)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:47,32-42)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:55,32-42)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:63,31-41)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:146,31-41)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:162,11-21)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:168,11-21)
+[1/1 comp 4s] Compiled /Users/yukiendo/workplace/bazel_codeql_eval/cpp-tutorial/mem55-test/../../../vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.ql.
+OperatorDeleteMissingPartnerCert.ql: [1/1 eval 399ms] Results written to cert-cpp-coding-standards/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.bqrs.
+Shutting down query evaluator.
+Interpreting results.
+Error retrieving qlpack commit hash from Git repository
+Error retrieving qlpack commit hash from Git repository
+Error retrieving qlpack commit hash from Git repository
+Error retrieving qlpack commit hash from Git repository
+Error retrieving qlpack commit hash from Git repository
 ```
 ### indirect operation
+1. bazel shutdown
+2. bazel clean --expunge
+3. **codeql database init ../../../codeql-db/mem55-test -l cpp -s .  **
+4. **codeql database trace-command ../../../codeql-db/mem55-test -- bazel build --spawn_strategy=local --nouse_action_cache //ope_delete_missing_partner:test**
+5. **codeql database finalize ../../../codeql-db/mem55-test **                                                                                                 
+6. **codeql database analyze ../../../codeql-db/mem55-test  --format=sarif-latest --output=results.sarif ../../../vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.ql **
 ```
 $ bazel shutdown
 yukiendo@YukinoMacBook-Pro: ~/workplace/examples/cpp-tutorial/mem55-test (main %=)
