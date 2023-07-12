@@ -1,0 +1,10 @@
+-o
+bazel-out/darwin_arm64-fastbuild/bin/main/test
+bazel-out/darwin_arm64-fastbuild/bin/main/_objs/test/test.pic.o
+bazel-out/darwin_arm64-fastbuild/bin/main/libtest-diff.a
+-Wl,-S
+-undefined
+dynamic_lookup
+-headerpad_max_install_names
+-lc++
+-lm

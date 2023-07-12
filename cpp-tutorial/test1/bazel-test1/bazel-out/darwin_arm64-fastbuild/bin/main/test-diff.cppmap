@@ -1,0 +1,7 @@
+module "//main:test-diff" {
+  export *
+  textual header "../../../../main/test-diff.h"
+  textual header "../../../../main/test.h"
+  use "crosstool"
+}
+extern module "crosstool" "../../../../external/local_config_cc/module.modulemap"

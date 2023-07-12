@@ -1,0 +1,9 @@
+module "//main:test" {
+  export *
+  use "//main:test-diff"
+  use "@bazel_tools//tools/cpp:malloc"
+  use "crosstool"
+}
+extern module "//main:test-diff" "../../../../bazel-out/darwin_arm64-fastbuild/bin/main/test-diff.cppmap"
+extern module "@bazel_tools//tools/cpp:malloc" "../../../../bazel-out/darwin_arm64-fastbuild/bin/external/bazel_tools/tools/cpp/malloc.cppmap"
+extern module "crosstool" "../../../../external/local_config_cc/module.modulemap"
