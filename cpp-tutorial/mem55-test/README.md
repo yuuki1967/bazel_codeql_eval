@@ -119,5 +119,27 @@ Running command in /Users/yukiendo/workplace/examples/cpp-tutorial/mem55-test: [
 $ codeql database finalize ../../../codeql-db/mem55-test                                                                                                  
 Running TRAP import for CodeQL database at /Users/yukiendo/workplace/codeql-db/mem55-test...
 TRAP import complete (892ms).
+
+$ codeql database analyze ../../../codeql-db/mem55-test  --format=sarif-latest --output=results.sarif ../../../vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.ql
+Running queries.
+Compiling query plan for /Users/yukiendo/workplace/bazel_codeql_eval/cpp-tutorial/mem55-test/../../../vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.ql.
+WARNING: Type XMLFile has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:19,35-42)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:28,37-47)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:39,51-61)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:47,32-42)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:55,32-42)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:63,31-41)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:146,31-41)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:162,11-21)
+WARNING: Type XMLElement has been deprecated and may be removed in future (/Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/codingstandards/cpp/deviations/Deviations.qll:168,11-21)
+[1/1 comp 4s] Compiled /Users/yukiendo/workplace/bazel_codeql_eval/cpp-tutorial/mem55-test/../../../vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.ql.
+OperatorDeleteMissingPartnerCert.ql: [1/1 eval 399ms] Results written to cert-cpp-coding-standards/rules/MEM55-CPP/OperatorDeleteMissingPartnerCert.bqrs.
+Shutting down query evaluator.
+Interpreting results.
+Error retrieving qlpack commit hash from Git repository
+Error retrieving qlpack commit hash from Git repository
+Error retrieving qlpack commit hash from Git repository
+Error retrieving qlpack commit hash from Git repository
+Error retrieving qlpack commit hash from Git repository
 ```
 

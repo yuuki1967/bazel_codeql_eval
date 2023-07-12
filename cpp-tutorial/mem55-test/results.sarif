@@ -1,0 +1,2360 @@
+{
+  "$schema" : "https://json.schemastore.org/sarif-2.1.0.json",
+  "version" : "2.1.0",
+  "runs" : [ {
+    "tool" : {
+      "driver" : {
+        "name" : "CodeQL",
+        "organization" : "GitHub",
+        "semanticVersion" : "2.13.3",
+        "notifications" : [ {
+          "id" : "cpp/baseline/expected-extracted-files",
+          "name" : "cpp/baseline/expected-extracted-files",
+          "shortDescription" : {
+            "text" : "Expected extracted files"
+          },
+          "fullDescription" : {
+            "text" : "Files appearing in the source archive that are expected to be extracted."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true
+          },
+          "properties" : {
+            "tags" : [ "expected-extracted-files", "telemetry" ]
+          }
+        } ],
+        "rules" : [ {
+          "id" : "cpp/cert/operator-delete-missing-partner-cert",
+          "name" : "cpp/cert/operator-delete-missing-partner-cert",
+          "shortDescription" : {
+            "text" : "MEM55-CPP: Replacement operator delete missing partner"
+          },
+          "fullDescription" : {
+            "text" : "Replacement implementations of operator delete should override the variants both with and without std::size_t, otherwise it violates the 'Required behavior' clause from the C++ Standard."
+          },
+          "defaultConfiguration" : {
+            "enabled" : true,
+            "level" : "error"
+          },
+          "properties" : {
+            "tags" : [ "external/cert/id/mem55-cpp", "correctness", "external/cert/obligation/rule" ],
+            "description" : "Replacement implementations of operator delete should override the variants both\n              with and without std::size_t, otherwise it violates the 'Required behavior' clause\n              from the C++ Standard.",
+            "id" : "cpp/cert/operator-delete-missing-partner-cert",
+            "kind" : "problem",
+            "name" : "MEM55-CPP: Replacement operator delete missing partner",
+            "precision" : "very-high",
+            "problem.severity" : "error"
+          }
+        } ]
+      },
+      "extensions" : [ {
+        "name" : "codeql/swift-all",
+        "semanticVersion" : "0.1.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/swift-all/0.1.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/swift-all/0.1.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-cpp",
+        "semanticVersion" : "0.0.0+b63a7e59c982eb2af5af8e024ee84e213440946b",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-cpp/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-cpp/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/cpp-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/cpp/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/cpp/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-lib",
+        "semanticVersion" : "0.4.7+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/experimental/adaptivethreatmodeling/lib/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/experimental/adaptivethreatmodeling/lib/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-examples",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ql/ql/examples/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ql/ql/examples/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "ldf-101-python/solutions",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/python/src/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/python/src/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "csharp-solorigate-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/campaigns/Solorigate/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/campaigns/Solorigate/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql",
+        "semanticVersion" : "0.0.0+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/ql/ql/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/ql/ql/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/cpp-queries",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/cpp-queries/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/cpp-queries/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-javascript",
+        "semanticVersion" : "0.0.0+b63a7e59c982eb2af5af8e024ee84e213440946b",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-javascript/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-javascript/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/go-customs",
+        "semanticVersion" : "0.0.0+3059ce307009d40afb690aa712c96e422cf76753",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-2.21/qlpacks/codeql/go-customs/0.0.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-2.21/qlpacks/codeql/go-customs/0.0.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-consistency-queries",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ql/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ql/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/go-custom",
+        "semanticVersion" : "0.0.0+12ca801ecfa51a41459da11c2beeee2acb827085",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/go-custom/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/go-custom/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-go",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-custom-queries-go/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-custom-queries-go/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-javascript",
+        "semanticVersion" : "0.0.0+82dd7c970d0166998c3f889ccc6b75bd9eb7c030",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-javascript/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-javascript/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-model-building",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/experimental/adaptivethreatmodeling/modelbuilding/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/experimental/adaptivethreatmodeling/modelbuilding/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-lib",
+        "semanticVersion" : "0.2.1+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/javascript/ql/experimental/adaptivethreatmodeling/lib/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/javascript/ql/experimental/adaptivethreatmodeling/lib/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/typetracking",
+        "semanticVersion" : "0.0.10+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/typetracking/0.0.10/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/typetracking/0.0.10/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/python-all",
+        "semanticVersion" : "0.9.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/python-all/0.9.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/python-all/0.9.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-examples",
+        "semanticVersion" : "0.0.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/javascript-examples/0.0.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/javascript-examples/0.0.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "misra-cpp-coding-standards",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/misra/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/misra/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "ldf-101-python-tests/solutions",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/python/tests/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/python/tests/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-upgrades",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/legacy-upgrades/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/legacy-upgrades/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/suite-helpers",
+        "semanticVersion" : "0.5.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/suite-helpers/0.5.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/suite-helpers/0.5.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-java",
+        "semanticVersion" : "0.0.0+b63a7e59c982eb2af5af8e024ee84e213440946b",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-java/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-java/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "qlc-100/solutions",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/QLC/100/src/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/QLC/100/src/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/go-examples",
+        "semanticVersion" : "0.0.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/go-examples/0.0.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/go-examples/0.0.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/python-queries",
+        "semanticVersion" : "0.7.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/python-queries/0.7.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/python-queries/0.7.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/cpp-tests-cwe-190-tainted",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/cpp/ql/test/query-tests/Security/CWE/CWE-190/semmle/tainted/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/cpp/ql/test/query-tests/Security/CWE/CWE-190/semmle/tainted/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "ldf-101-tests/problems",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/cpp/tests/problems/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/cpp/tests/problems/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-java",
+        "semanticVersion" : "0.0.0+82dd7c970d0166998c3f889ccc6b75bd9eb7c030",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-java/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-java/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-lib",
+        "semanticVersion" : "0.4.10+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/experimental/adaptivethreatmodeling/lib/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/experimental/adaptivethreatmodeling/lib/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-java-consistency-queries",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/java/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/java/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "exercises-tests",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/tests/exercises/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/tests/exercises/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "ldf-101/problems",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/cpp/src/problems/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/cpp/src/problems/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "sample/cpp-sql-injection",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-dataflow-sql-injection/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-dataflow-sql-injection/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-ruby",
+        "semanticVersion" : "0.0.0+b63a7e59c982eb2af5af8e024ee84e213440946b",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-ruby/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-ruby/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-java",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/java/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/java/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/python-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/python/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/python/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/yaml",
+        "semanticVersion" : "0.0.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/yaml/0.0.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/yaml/0.0.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "misra-cpp-coding-standards-tests",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/misra/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/misra/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/experimental/adaptivethreatmodeling/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/experimental/adaptivethreatmodeling/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/tutorial",
+        "semanticVersion" : "0.0.10+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/tutorial/0.0.10/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/tutorial/0.0.10/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-csharp",
+        "semanticVersion" : "0.0.0+b63a7e59c982eb2af5af8e024ee84e213440946b",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-csharp/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-csharp/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ruby-examples",
+        "semanticVersion" : "0.0.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/ruby-examples/0.0.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/ruby-examples/0.0.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-cpp",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/cpp/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/cpp/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "ldf-101-cpp-tests/solutions",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/cpp/tests/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/cpp/tests/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-java",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/java/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/java/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-swift-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/swift/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/swift/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-queries",
+        "semanticVersion" : "0.4.7+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/experimental/adaptivethreatmodeling/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/experimental/adaptivethreatmodeling/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-csharp-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ruby-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ruby/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ruby/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/go-all",
+        "semanticVersion" : "0.5.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/go-all/0.5.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/go-all/0.5.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "session-tests",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/tests/session/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/tests/session/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-queries",
+        "semanticVersion" : "0.2.1+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/javascript/ql/experimental/adaptivethreatmodeling/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/javascript/ql/experimental/adaptivethreatmodeling/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ql/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ql/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ruby-consistency-queries",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ruby/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ruby/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "ldf-101-cpp/solutions",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/cpp/src/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/cpp/src/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "my-custom-queries",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-java/java/queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-java/java/queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "report-cpp-coding-standards",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/report/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/report/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ruby-all",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/ruby-all/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/ruby-all/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "cert-cpp-coding-standards",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/cert/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/java-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/java/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/java/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ql/ql/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/ql/ql/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ql/ql/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ql/ql/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "ldf-101-ts/solutions",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/ts/src/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/ts/src/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-model-building",
+        "semanticVersion" : "0.0.0+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/javascript/ql/experimental/adaptivethreatmodeling/modelbuilding/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/javascript/ql/experimental/adaptivethreatmodeling/modelbuilding/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "qlc-100-tests/problems",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/QLC/100/tests/problems/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/QLC/100/tests/problems/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/csharp-solorigate-queries",
+        "semanticVersion" : "1.5.1+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/campaigns/Solorigate/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/campaigns/Solorigate/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/python-consistency-queries",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/python/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/python/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/cpp-all",
+        "semanticVersion" : "0.7.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/cpp-all/0.7.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/cpp-all/0.7.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-javascript",
+        "semanticVersion" : "0.0.0+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/workshop-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/workshop-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-csharp-consistency-queries",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ruby-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ruby/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ruby/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "learning-uboot",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-uboot/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-uboot/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "autosar-cpp-coding-standards-tests",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/autosar/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/autosar/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-consistency-queries",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ql/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ql/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "qlc-102-js-tests/solutions",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/102/javascript/tests/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/102/javascript/tests/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-tests",
+        "semanticVersion" : "0.0.0+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/ql/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/ql/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-go",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/go/ql/config/legacy-support/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/go/ql/config/legacy-support/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-ctf-segv",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/yuuki1967-codeql-ctf-segv/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/yuuki1967-codeql-ctf-segv/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-python",
+        "semanticVersion" : "0.0.0+82dd7c970d0166998c3f889ccc6b75bd9eb7c030",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-python/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-python/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-go",
+        "semanticVersion" : "0.0.0+82dd7c970d0166998c3f889ccc6b75bd9eb7c030",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-go/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-go/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/csharp-solorigate-queries",
+        "semanticVersion" : "1.4.2+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/campaigns/Solorigate/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/campaigns/Solorigate/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "autosar-cpp-coding-standards",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/autosar/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/autosar/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-python",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/python/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/python/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-java-consistency-queries",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/java/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/java/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-examples",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ql/ql/examples/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ql/ql/examples/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "unsafe-jquery",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-javascript-unsafe-jquery-plugin/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-javascript-unsafe-jquery-plugin/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ssa",
+        "semanticVersion" : "0.0.17+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/ssa/0.0.17/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/ssa/0.0.17/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-model-building",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/experimental/adaptivethreatmodeling/modelbuilding/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/experimental/adaptivethreatmodeling/modelbuilding/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/cpp-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/cpp/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/cpp/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/regex",
+        "semanticVersion" : "0.0.13+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/regex/0.0.13/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/regex/0.0.13/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-ruby",
+        "semanticVersion" : "0.0.0+82dd7c970d0166998c3f889ccc6b75bd9eb7c030",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-ruby/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-ruby/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/python-examples",
+        "semanticVersion" : "0.0.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/python-examples/0.0.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/python-examples/0.0.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-javascript",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/javascript/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/javascript/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "qlc-100/problems",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/QLC/100/src/problems/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/QLC/100/src/problems/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-csharp",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/csharp/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/csharp/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "qlc-100-tests/solutions",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/QLC/100/tests/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/QLC/100/tests/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-swift-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/swift/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/swift/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "my-custom-js",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/my-custome-js/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/my-custome-js/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/go-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/go/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/go/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/cpp-examples",
+        "semanticVersion" : "0.0.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/cpp-examples/0.0.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/cpp-examples/0.0.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "cert-cpp-coding-standards-tests",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/cert/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/cert/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ruby-consistency-queries",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ruby/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ruby/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-javascript",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/javascript/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/misc/legacy-support/javascript/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/typos",
+        "semanticVersion" : "0.0.17+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/typos/0.0.17/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/typos/0.0.17/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-csharp-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "common-cpp-coding-standards",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-csharp",
+        "semanticVersion" : "0.0.0+82dd7c970d0166998c3f889ccc6b75bd9eb7c030",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-csharp/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-csharp/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-consistency-queries",
+        "semanticVersion" : "0.0.0+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/ql/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/ql/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/go-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/go/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/go/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-tests",
+        "semanticVersion" : "0.0.0+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/javascript/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/javascript/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "session",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/src/session/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/src/session/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "common-cpp-coding-standards-tests",
+        "semanticVersion" : "1.1.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-coding-standards/cpp/common/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "csharp-solorigate-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/campaigns/Solorigate/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/campaigns/Solorigate/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/cpp-tests-cwe-190-tainted",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/cpp/ql/test/query-tests/Security/CWE/CWE-190/semmle/tainted/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/cpp/ql/test/query-tests/Security/CWE/CWE-190/semmle/tainted/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-examples",
+        "semanticVersion" : "0.0.0+77d25e6d881cf36079ca1c3ba0433cea478a2367",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/ql/ql/examples/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-workshop/ql/ql/ql/examples/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/csharp-queries",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/csharp-queries/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/csharp-queries/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/csharp-examples",
+        "semanticVersion" : "0.0.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/csharp-examples/0.0.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/csharp-examples/0.0.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/csharp-solorigate-all",
+        "semanticVersion" : "1.4.2+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/campaigns/Solorigate/lib/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/campaigns/Solorigate/lib/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/experimental/adaptivethreatmodeling/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/javascript/ql/experimental/adaptivethreatmodeling/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-queries",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/javascript-queries/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/javascript-queries/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "integration-tests-swift",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/swift/integration-tests/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/swift/integration-tests/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "integration-tests-swift",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/swift/integration-tests/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/swift/integration-tests/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-go",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/go/ql/config/legacy-support/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/go/ql/config/legacy-support/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-all",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/javascript-all/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/javascript-all/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql-csharp-consistency-queries",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/csharp/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "session-db",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/src/session-db/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/src/session-db/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "ldf-101-ts-tests/solutions",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/ts/tests/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/101/ts/tests/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "qlc-102-js/solutions",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/102/javascript/src/solutions/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/102/javascript/src/solutions/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "exercises",
+        "semanticVersion" : "0.0.1+cef49ef745dd5f174f303ff48f6dd09edd4c5e24",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/src/exercises/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql-learning-catalog/docs/LDF/204/cpp/src/exercises/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/csharp-all",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/csharp-all/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/csharp-all/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/go-queries",
+        "semanticVersion" : "0.5.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.5.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/go-queries/0.5.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-python",
+        "semanticVersion" : "0.0.0+b63a7e59c982eb2af5af8e024ee84e213440946b",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-python/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-python/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/util",
+        "semanticVersion" : "0.0.10+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/util/0.0.10/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/util/0.0.10/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/java-queries",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/java-queries/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/java-queries/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ql-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ql/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/ql/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/javascript-experimental-atm-queries",
+        "semanticVersion" : "0.4.10+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/experimental/adaptivethreatmodeling/src/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/javascript/ql/experimental/adaptivethreatmodeling/src/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-cpp",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/cpp/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/cpp/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/java-examples",
+        "semanticVersion" : "0.0.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/java-examples/0.0.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/java-examples/0.0.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/python-tests",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/python/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/python/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "yuuki1967/my-java-custom-queries",
+        "semanticVersion" : "0.0.1",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/my-java-custom-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/my-java-custom-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-python",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/python/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/python/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "my-query-tests",
+        "semanticVersion" : "0.0.0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-java/java/tests/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-java/java/tests/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/java-all",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/java-all/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/java-all/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/python-consistency-queries",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/python/ql/consistency-queries/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/python/ql/consistency-queries/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/java-tests",
+        "semanticVersion" : "0.0.0+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/java/ql/test/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/java/ql/test/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "legacy-libraries-csharp",
+        "semanticVersion" : "0.0.0+aef66c462abe817e33aad91d97aa782a1e2ad2c7",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/csharp/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/ql/misc/legacy-support/csharp/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/ruby-queries",
+        "semanticVersion" : "0.6.2+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/ruby-queries/0.6.2/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/ruby-queries/0.6.2/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/csharp-solorigate-all",
+        "semanticVersion" : "1.5.1+c1a52031cfd323b34a039cc6dcda4f73d7ad892e",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/campaigns/Solorigate/lib/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/ql/csharp/ql/campaigns/Solorigate/lib/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-go",
+        "semanticVersion" : "0.0.0+b63a7e59c982eb2af5af8e024ee84e213440946b",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-go/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter/codeql-custom-queries-go/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "getting-started/codeql-extra-queries-cpp",
+        "semanticVersion" : "0.0.0+82dd7c970d0166998c3f889ccc6b75bd9eb7c030",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-cpp/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/vscode-codeql-starter-20230525/codeql-custom-queries-cpp/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      }, {
+        "name" : "codeql/swift-queries",
+        "semanticVersion" : "0.1.0+ff78ac98d27c7b9f1adffcf235c56855f8348ad0",
+        "locations" : [ {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/swift-queries/0.1.0/",
+          "description" : {
+            "text" : "The QL pack root directory."
+          }
+        }, {
+          "uri" : "file:///Users/yukiendo/workplace/codeql/qlpacks/codeql/swift-queries/0.1.0/qlpack.yml",
+          "description" : {
+            "text" : "The QL pack definition file."
+          }
+        } ]
+      } ]
+    },
+    "invocations" : [ {
+      "toolExecutionNotifications" : [ {
+        "locations" : [ {
+          "physicalLocation" : {
+            "artifactLocation" : {
+              "uri" : "ope_delete_missing_partner/test.cpp",
+              "uriBaseId" : "%SRCROOT%",
+              "index" : 0
+            }
+          }
+        } ],
+        "message" : {
+          "text" : ""
+        },
+        "level" : "none",
+        "descriptor" : {
+          "id" : "cpp/baseline/expected-extracted-files",
+          "index" : 0
+        },
+        "properties" : {
+          "formattedMessage" : {
+            "text" : ""
+          }
+        }
+      } ],
+      "executionSuccessful" : true
+    } ],
+    "artifacts" : [ {
+      "location" : {
+        "uri" : "ope_delete_missing_partner/test.cpp",
+        "uriBaseId" : "%SRCROOT%",
+        "index" : 0
+      }
+    } ],
+    "results" : [ {
+      "ruleId" : "cpp/cert/operator-delete-missing-partner-cert",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/cert/operator-delete-missing-partner-cert",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "Custom operator delete\\[\\](void *) is missing overload that takes std::size_t."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "ope_delete_missing_partner/test.cpp",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 10,
+            "startColumn" : 6,
+            "endColumn" : 23
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "71a1254224de0e38:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "cpp/cert/operator-delete-missing-partner-cert",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/cert/operator-delete-missing-partner-cert",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "Custom operator delete(void *) is missing overload that takes std::size_t."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "ope_delete_missing_partner/test.cpp",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 4,
+            "startColumn" : 6,
+            "endColumn" : 21
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "5f5ffe5839386945:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    }, {
+      "ruleId" : "cpp/cert/operator-delete-missing-partner-cert",
+      "ruleIndex" : 0,
+      "rule" : {
+        "id" : "cpp/cert/operator-delete-missing-partner-cert",
+        "index" : 0
+      },
+      "message" : {
+        "text" : "Custom operator delete(void *,size_t,const nothrow_t &) is missing overload that does not take std::size_t."
+      },
+      "locations" : [ {
+        "physicalLocation" : {
+          "artifactLocation" : {
+            "uri" : "ope_delete_missing_partner/test.cpp",
+            "uriBaseId" : "%SRCROOT%",
+            "index" : 0
+          },
+          "region" : {
+            "startLine" : 8,
+            "startColumn" : 6,
+            "endColumn" : 21
+          }
+        }
+      } ],
+      "partialFingerprints" : {
+        "primaryLocationLineHash" : "d993fdaab1824e24:1",
+        "primaryLocationStartColumnFingerprint" : "5"
+      }
+    } ],
+    "columnKind" : "utf16CodeUnits",
+    "properties" : {
+      "semmle.formatSpecifier" : "sarif-latest"
+    }
+  } ]
+}
