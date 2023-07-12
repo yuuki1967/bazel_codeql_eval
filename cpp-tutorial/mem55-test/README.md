@@ -1,4 +1,10 @@
 # MEM55
+## Environment
+OS: macos m1
+bazel 6.2.1-homebrew
+Apple clang version 14.0.3 (clang-1403.0.22.14.1)
+Target: arm64-apple-darwin22.5.0
+Thread model: posix
 
 ## How to analyze MEM55 with CodeQL
 
